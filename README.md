@@ -65,6 +65,8 @@ If any of these are present, it pauses and asks you to confirm before continuing
 chinese-philosophy-3stage/
 ├── SKILL.md          ← the engineering spec (Claude reads this)
 ├── README.md         ← this file (humans read this)
+├── cp3/
+│   └── SKILL.md      ← short alias `/cp3` → identical behavior
 ├── examples.md       ← Chinese-language worked examples
 ├── examples-en.md    ← English-language worked examples
 ├── LICENSE           ← MIT
@@ -78,7 +80,20 @@ chinese-philosophy-3stage/
 
 ### For Claude Code users
 
-The skill is named `acpte-tod`. Invoke it with the slash command:
+The skill has two slash commands — pick whichever you prefer:
+
+| Command | Length | Use case |
+|---|---|---|
+| `/cp3` | 4 chars | Quick invocation, terse prompts |
+| `/acpte-tod` | 9 chars | Full name, explicit reference |
+
+Both commands trigger **identical** behavior — `/cp3` is a thin alias to `/acpte-tod`.
+
+```
+/cp3 I'm facing a decision about whether to take a higher-paying job that requires relocation.
+```
+
+or
 
 ```
 /acpte-tod I'm facing a decision about whether to take a higher-paying job that requires relocation.
